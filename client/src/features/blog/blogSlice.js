@@ -3,7 +3,6 @@ import blogService from "./blogService";
 
 const initialState = {
   blogs: [],
-  blog: {},
   isError: false,
   isSuccess: false,
   isLoading: false,
