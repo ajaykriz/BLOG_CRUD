@@ -14,6 +14,11 @@ function Blog() {
     setModal(true);
     setId(blog);
   };
+  const handleDelete=(id)=>{
+    if(window.confirm('Are you sure?')==true){
+      dispatch(deleteBlog(id))
+    }
+  }
   useEffect(() => {
     dispatch(getBlogs());
   }, [modal]);
@@ -32,7 +37,7 @@ function Blog() {
             <div className="flex justify-center mt-7">
               <div className="flex justify-end mr-1">
                 <button
-                  onClick={() => dispatch(deleteBlog(blog._id))}
+                  onClick={() =>handleDelete(blog._id)}
                   className="bg-yellow-400 rounded-sm p-1 px-1 font-medium"
                 >
                   DELETE BLOG
