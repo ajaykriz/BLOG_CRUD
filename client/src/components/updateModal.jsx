@@ -65,7 +65,7 @@ function Modal({ blogId, setModal }) {
             </button>
             <div className="py-6 px-6 lg:px-8">
               <h3 className="mb-4 text-xl font-medium text-black">
-                ADD TO BLOG LIST
+                UPDATE THE BLOG
               </h3>
               <form className="space-y-4" onSubmit={onSubmit}>
                 <div>
