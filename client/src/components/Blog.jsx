@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getBlogs, deleteBlog } from "../features/blog/blogSlice";
 import UpdateModal from "./updateModal";
+import DeleteModal from './DeleteConfirm'
 
 function Blog() {
   const dispatch = useDispatch();
   const [modal, setModal] = useState(false);
+  const [confirm, setConfirm] = useState(false); 
   const [id, setId] = useState("");
   const { blogs, isLoading, isError, message } = useSelector(
     (state) => state.blogs
@@ -15,9 +17,8 @@ function Blog() {
     setId(blog);
   };
   const handleDelete=(id)=>{
-    if(window.confirm('Are you sure?')==true){
-      dispatch(deleteBlog(id))
-    }
+    setId(id)
+    setConfirm(true)
   }
   useEffect(() => {
     dispatch(getBlogs());
@@ -56,6 +57,7 @@ function Blog() {
         ))}
       </div>
       {modal && <UpdateModal blogId={id} setModal={setModal} />}
+      {confirm && <DeleteModal id={id} setConfirm={setConfirm} />}
     </>
   );
 }

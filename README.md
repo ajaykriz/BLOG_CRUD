@@ -1,12 +1,24 @@
 # blog-app
 
-For security reasons, some variables have been hidden from view and used as environmental variables with the help of dotenv package. Below are the variables that you need to set in order to run the application:
+## Introduction
 
+A Blog app  using Node js, Express js,react.js and MongoDb.
 
-After you've set the environmental variables in the .env file at the root of the project, and intsall node modules using `npm install`
+NOTE: Please read the RUN section before opening an issue.
 
-Open terminals and direct to respective servers `cd api` and `cd client`
-Now you can run `npm start` in the terminal at each terminals and the application should work.
+## Run
+Enter to respective servers api(backend) and client(frontend), intsall node modules using `npm install` in both terminals
+
+Now you can run `npm start` in at each terminals and the application should work.
+
+## Technology
+
+The application is built with:
+
+- Node.js 
+- MongoDB
+- Express 
+- React.js 
 
 
 
