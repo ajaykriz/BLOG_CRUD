@@ -4,7 +4,7 @@ const connectDB = require("./config/db");
 const blogRoute = require("./routes/blogRoute");
 const cors = require("cors");
 const { errorHandler } = require("./middleware/error");
-const port = process.env.PORT || 5000;
+const port = 5000;
 const app = express();
 
 app.use(express.json());
